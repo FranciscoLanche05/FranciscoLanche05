@@ -2,30 +2,25 @@
   <defs>
     <style>
       @keyframes bar-pulse-hp {
-        0%, 100% { width: 92%; }
-        50% { width: 95%; }
+        0%, 100% { width: 75%; }
+        50% { width: 78%; }
       }
       @keyframes bar-pulse-mp {
-        0%, 100% { width: 88%; }
-        50% { width: 90%; }
+        0%, 100% { width: 68%; }
+        50% { width: 71%; }
       }
       @keyframes bar-pulse-exp {
-        0%, 100% { width: 96%; }
-        50% { width: 98%; }
+        0%, 100% { width: 18%; }
+        50% { width: 20%; }
       }
       @keyframes badge-glow {
-        0%, 100% { filter: drop-shadow(0 0 4px #FFD700); }
-        50% { filter: drop-shadow(0 0 10px #FF9100); }
-      }
-      @keyframes text-sparkle {
-        0%, 100% { opacity: 0.9; }
-        50% { opacity: 1; text-shadow: 0 0 8px #64FFDA; }
+        0%, 100% { filter: drop-shadow(0 0 4px #00E5FF); }
+        50% { filter: drop-shadow(0 0 10px #76FF03); }
       }
       .hp-fill { animation: bar-pulse-hp 4s infinite ease-in-out; }
       .mp-fill { animation: bar-pulse-mp 4s infinite ease-in-out 1s; }
       .exp-fill { animation: bar-pulse-exp 4s infinite ease-in-out 2s; }
       .rank-badge { animation: badge-glow 3s infinite ease-in-out; }
-      .glowing-title { animation: text-sparkle 3s infinite ease-in-out; }
     </style>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#121824"/>
@@ -33,20 +28,24 @@
       <stop offset="100%" stop-color="#0e131d"/>
     </linearGradient>
     <linearGradient id="hpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF1744"/>
-      <stop offset="100%" stop-color="#FF5252"/>
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#FF7A7A"/>
     </linearGradient>
     <linearGradient id="mpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#2979FF"/>
       <stop offset="100%" stop-color="#00E5FF"/>
     </linearGradient>
     <linearGradient id="expGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#76FF03"/>
+      <stop offset="100%" stop-color="#B2FF59"/>
+    </linearGradient>
+    <linearGradient id="statGradJunior" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00BCD4"/>
+      <stop offset="100%" stop-color="#80DEEA"/>
+    </linearGradient>
+    <linearGradient id="statGradMax" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFD600"/>
       <stop offset="100%" stop-color="#FFAB00"/>
-    </linearGradient>
-    <linearGradient id="statGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00E676"/>
-      <stop offset="100%" stop-color="#69F0AE"/>
     </linearGradient>
   </defs>
 
@@ -56,38 +55,33 @@
   
   <!-- Corner Pixel Art Ornaments -->
   <g fill="#FFD700">
-    <!-- Top Left -->
     <rect x="8" y="8" width="10" height="4"/>
     <rect x="8" y="8" width="4" height="10"/>
-    <!-- Top Right -->
     <rect x="832" y="8" width="10" height="4"/>
     <rect x="838" y="8" width="4" height="10"/>
-    <!-- Bottom Left -->
     <rect x="8" y="368" width="10" height="4"/>
     <rect x="8" y="362" width="4" height="10"/>
-    <!-- Bottom Right -->
     <rect x="832" y="368" width="10" height="4"/>
     <rect x="838" y="362" width="4" height="10"/>
   </g>
 
   <!-- Header Section -->
   <rect x="25" y="24" width="800" height="50" rx="6" fill="#1f2c4c" stroke="#3d5a80" stroke-width="1.5"/>
-  <text x="45" y="56" fill="#FFD700" font-family="'Courier New', monospace" font-size="22" font-weight="900" letter-spacing="2">📜 FICHA DE PERSONAJE · CHARACTER STATUS</text>
+  <text x="45" y="56" fill="#FFD700" font-family="'Courier New', monospace" font-size="22" font-weight="900" letter-spacing="2">📜 FICHA DE PERSONAJE · JUNIOR ADVENTURER</text>
   
-  <!-- Level Badge -->
+  <!-- Level Badge (LV. 18) -->
   <g class="rank-badge" transform="translate(760, 48)">
-    <polygon points="0,-18 20,-10 20,10 0,18 -20,10 -20,-10" fill="#FFD700" stroke="#FFF" stroke-width="1.5"/>
-    <text x="0" y="5" fill="#1a1a2e" font-family="'Courier New', monospace" font-size="12" font-weight="900" text-anchor="middle">LV.99</text>
+    <polygon points="0,-18 20,-10 20,10 0,18 -20,10 -20,-10" fill="#00E5FF" stroke="#FFF" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#0c121e" font-family="'Courier New', monospace" font-size="12" font-weight="900" text-anchor="middle">LV.18</text>
   </g>
 
   <!-- Left Column: Avatar & Core Info -->
   <g transform="translate(30, 95)">
     <!-- Avatar Box -->
-    <rect x="0" y="0" width="220" height="250" rx="8" fill="#151d2f" stroke="#D4AF37" stroke-width="1.5"/>
+    <rect x="0" y="0" width="220" height="250" rx="8" fill="#151d2f" stroke="#00E5FF" stroke-width="1.5"/>
     
     <!-- Mini Pixel Hero representation -->
     <circle cx="110" cy="65" r="42" fill="#243452" stroke="#64FFDA" stroke-width="2"/>
-    <!-- Explorer character face pixel representation -->
     <rect x="94" y="35" width="32" height="12" fill="#8B6914"/>
     <rect x="86" y="45" width="48" height="8" fill="#A07828"/>
     <rect x="94" y="53" width="32" height="24" fill="#FDBCB4"/>
@@ -96,77 +90,77 @@
     <rect x="102" y="62" width="2" height="2" fill="#FFF"/>
     <rect x="116" y="62" width="2" height="2" fill="#FFF"/>
     <rect x="106" y="70" width="8" height="3" fill="#c97878"/>
-    <!-- Armor/Tunic -->
+    <!-- Tunic & Belt -->
     <rect x="90" y="77" width="40" height="25" fill="#2E7D32"/>
     <rect x="90" y="93" width="40" height="5" fill="#5D4037"/>
-    <rect x="106" y="91" width="8" height="9" fill="#FFD700"/>
+    <rect x="106" y="91" width="8" height="9" fill="#00E5FF"/>
 
     <!-- Hero Identity -->
     <text x="110" y="130" fill="#FFFFFF" font-family="'Courier New', monospace" font-size="17" font-weight="900" text-anchor="middle">Francisco Lanche</text>
-    <text x="110" y="150" fill="#64FFDA" font-family="'Courier New', monospace" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">FULL STACK EXPLORER</text>
+    <text x="110" y="150" fill="#64FFDA" font-family="'Courier New', monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">JUNIOR FULL STACK DEV</text>
 
-    <!-- Class & Guild -->
+    <!-- Class & Guild Details -->
     <line x1="15" y1="165" x2="205" y2="165" stroke="#3d5a80" stroke-width="1"/>
-    <text x="20" y="185" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">⚔️ CLASE: Full Stack Dev</text>
-    <text x="20" y="205" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">🏰 GUILD: FranciscoLancheDEV</text>
-    <text x="20" y="225" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">🗺️ ORIGEN: Mundo Digital</text>
-    <text x="20" y="243" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">🎯 MISIÓN: Código Legendario</text>
+    <text x="20" y="185" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">⚔️ CLASE: Junior Explorer</text>
+    <text x="20" y="205" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">🏰 RANGO: Aprendiz (Rank D)</text>
+    <text x="20" y="225" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">🌱 ESTADO: En Aprendizaje</text>
+    <text x="20" y="243" fill="#90CAF9" font-family="'Courier New', monospace" font-size="11">🎯 META: Subir a Mid-Level</text>
   </g>
 
   <!-- Right Column: Bars & Attributes -->
   <g transform="translate(275, 95)">
     <!-- HP BAR -->
-    <text x="0" y="16" fill="#FF5252" font-family="'Courier New', monospace" font-size="13" font-weight="900">❤️ HP (Pasión / Vida):</text>
-    <text x="500" y="16" fill="#FF8A80" font-family="'Courier New', monospace" font-size="12" text-anchor="end">9,999 / 9,999</text>
+    <text x="0" y="16" fill="#FF5252" font-family="'Courier New', monospace" font-size="13" font-weight="900">❤️ HP (Pasión &amp; Energía):</text>
+    <text x="500" y="16" fill="#FF8A80" font-family="'Courier New', monospace" font-size="12" text-anchor="end">1,800 / 2,000</text>
     <rect x="0" y="24" width="530" height="14" rx="4" fill="#2d1216" stroke="#FF5252" stroke-width="1"/>
-    <rect class="hp-fill" x="2" y="26" width="490" height="10" rx="3" fill="url(#hpGrad)"/>
+    <rect class="hp-fill" x="2" y="26" width="395" height="10" rx="3" fill="url(#hpGrad)"/>
 
     <!-- MP BAR -->
-    <text x="0" y="60" fill="#00E5FF" font-family="'Courier New', monospace" font-size="13" font-weight="900">⚡ MP (Creatividad / Mana):</text>
-    <text x="500" y="60" fill="#80D8FF" font-family="'Courier New', monospace" font-size="12" text-anchor="end">4,850 / 5,000</text>
+    <text x="0" y="60" fill="#00E5FF" font-family="'Courier New', monospace" font-size="13" font-weight="900">⚡ MP (Creatividad &amp; Enfoque):</text>
+    <text x="500" y="60" fill="#80D8FF" font-family="'Courier New', monospace" font-size="12" text-anchor="end">1,250 / 1,500</text>
     <rect x="0" y="68" width="530" height="14" rx="4" fill="#0a1d30" stroke="#00E5FF" stroke-width="1"/>
-    <rect class="mp-fill" x="2" y="70" width="470" height="10" rx="3" fill="url(#mpGrad)"/>
+    <rect class="mp-fill" x="2" y="70" width="360" height="10" rx="3" fill="url(#mpGrad)"/>
 
     <!-- EXP BAR -->
-    <text x="0" y="104" fill="#FFD600" font-family="'Courier New', monospace" font-size="13" font-weight="900">⭐ EXP (Experiencia Técnica):</text>
-    <text x="500" y="104" fill="#FFE57F" font-family="'Courier New', monospace" font-size="12" text-anchor="end">98.5% (Max Rank)</text>
-    <rect x="0" y="112" width="530" height="14" rx="4" fill="#2e2508" stroke="#FFD600" stroke-width="1"/>
-    <rect class="exp-fill" x="2" y="114" width="510" height="10" rx="3" fill="url(#expGrad)"/>
+    <text x="0" y="104" fill="#76FF03" font-family="'Courier New', monospace" font-size="13" font-weight="900">⭐ EXP (Progreso de Nivel):</text>
+    <text x="500" y="104" fill="#CCFF90" font-family="'Courier New', monospace" font-size="12" text-anchor="end">18% (Nivel 18)</text>
+    <rect x="0" y="112" width="530" height="14" rx="4" fill="#152610" stroke="#76FF03" stroke-width="1"/>
+    <rect class="exp-fill" x="2" y="114" width="105" height="10" rx="3" fill="url(#expGrad)"/>
 
-    <!-- Stats Matrix Box -->
+    <!-- Stats Matrix Box (Junior Realistic Stats) -->
     <rect x="0" y="140" width="530" height="110" rx="6" fill="#151d2f" stroke="#3d5a80" stroke-width="1"/>
     
     <!-- Attribute Grid -->
     <!-- Col 1 -->
     <text x="15" y="166" fill="#E0E0E0" font-family="'Courier New', monospace" font-size="12" font-weight="bold">🗡️ FRONTEND:</text>
     <rect x="140" y="156" width="100" height="10" rx="2" fill="#1a3024"/>
-    <rect x="140" y="156" width="95" height="10" rx="2" fill="url(#statGrad)"/>
-    <text x="245" y="165" fill="#69F0AE" font-family="'Courier New', monospace" font-size="11">95/100</text>
+    <rect x="140" y="156" width="65" height="10" rx="2" fill="url(#statGradJunior)"/>
+    <text x="245" y="165" fill="#80DEEA" font-family="'Courier New', monospace" font-size="11">65/100</text>
 
     <text x="15" y="196" fill="#E0E0E0" font-family="'Courier New', monospace" font-size="12" font-weight="bold">🛡️ BACKEND:</text>
     <rect x="140" y="186" width="100" height="10" rx="2" fill="#1a3024"/>
-    <rect x="140" y="186" width="92" height="10" rx="2" fill="url(#statGrad)"/>
-    <text x="245" y="195" fill="#69F0AE" font-family="'Courier New', monospace" font-size="11">92/100</text>
+    <rect x="140" y="186" width="58" height="10" rx="2" fill="url(#statGradJunior)"/>
+    <text x="245" y="195" fill="#80DEEA" font-family="'Courier New', monospace" font-size="11">58/100</text>
 
     <text x="15" y="226" fill="#E0E0E0" font-family="'Courier New', monospace" font-size="12" font-weight="bold">💾 DATABASE/SQL:</text>
     <rect x="140" y="216" width="100" height="10" rx="2" fill="#1a3024"/>
-    <rect x="140" y="216" width="88" height="10" rx="2" fill="url(#statGrad)"/>
-    <text x="245" y="225" fill="#69F0AE" font-family="'Courier New', monospace" font-size="11">88/100</text>
+    <rect x="140" y="216" width="52" height="10" rx="2" fill="url(#statGradJunior)"/>
+    <text x="245" y="225" fill="#80DEEA" font-family="'Courier New', monospace" font-size="11">52/100</text>
 
     <!-- Col 2 -->
     <text x="280" y="166" fill="#E0E0E0" font-family="'Courier New', monospace" font-size="12" font-weight="bold">🎮 GAME DEV/UNITY:</text>
     <rect x="420" y="156" width="70" height="10" rx="2" fill="#1a3024"/>
-    <rect x="420" y="156" width="62" height="10" rx="2" fill="url(#statGrad)"/>
-    <text x="495" y="165" fill="#69F0AE" font-family="'Courier New', monospace" font-size="11">88%</text>
+    <rect x="420" y="156" width="35" height="10" rx="2" fill="url(#statGradJunior)"/>
+    <text x="495" y="165" fill="#80DEEA" font-family="'Courier New', monospace" font-size="11">50%</text>
 
     <text x="280" y="196" fill="#E0E0E0" font-family="'Courier New', monospace" font-size="12" font-weight="bold">🧠 PROBLEM SOLVING:</text>
     <rect x="420" y="186" width="70" height="10" rx="2" fill="#1a3024"/>
-    <rect x="420" y="186" width="68" height="10" rx="2" fill="url(#statGrad)"/>
-    <text x="495" y="195" fill="#69F0AE" font-family="'Courier New', monospace" font-size="11">98%</text>
+    <rect x="420" y="186" width="43" height="10" rx="2" fill="url(#statGradJunior)"/>
+    <text x="495" y="195" fill="#80DEEA" font-family="'Courier New', monospace" font-size="11">62%</text>
 
-    <text x="280" y="226" fill="#E0E0E0" font-family="'Courier New', monospace" font-size="12" font-weight="bold">⚡ CLEAN CODE:</text>
-    <rect x="420" y="216" width="70" height="10" rx="2" fill="#1a3024"/>
-    <rect x="420" y="216" width="66" height="10" rx="2" fill="url(#statGrad)"/>
-    <text x="495" y="225" fill="#69F0AE" font-family="'Courier New', monospace" font-size="11">95%</text>
+    <text x="280" y="226" fill="#FFD700" font-family="'Courier New', monospace" font-size="12" font-weight="900">⭐ GANAS DE APRENDER:</text>
+    <rect x="420" y="216" width="70" height="10" rx="2" fill="#3e2e04"/>
+    <rect x="420" y="216" width="69" height="10" rx="2" fill="url(#statGradMax)"/>
+    <text x="495" y="225" fill="#FFD600" font-family="'Courier New', monospace" font-size="11" font-weight="bold">100%</text>
   </g>
 </svg>

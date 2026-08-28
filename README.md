@@ -4,7 +4,7 @@
      ZONA 1: EL ARCADE MEDIEVAL · HEADER ANIMADO
      ======================================================== -->
 
-<img src="./assets/header-banner.svg" alt="Francisco Lanche - Medieval Arcade Adventure" width="100%" />
+<img src="./assets/header-banner.gif" alt="Francisco Lanche - Medieval Arcade Adventure" width="100%" />
 
 <br/><br/>
 
