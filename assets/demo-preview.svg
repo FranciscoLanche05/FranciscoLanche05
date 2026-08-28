@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+  <defs>
+    <style>
+      /* ===== PIXEL FONT ===== */
+      @keyframes blink-cursor {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes float-text {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+      }
+      @keyframes walk {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(580px); }
+      }
+      @keyframes walk-bob {
+        0%, 100% { transform: translateY(0px); }
+        25% { transform: translateY(-2px); }
+        50% { transform: translateY(0px); }
+        75% { transform: translateY(-2px); }
+      }
+      @keyframes cloud1 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(820px); }
+      }
+      @keyframes cloud2 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(820px); }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+      @keyframes twinkle2 {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+      @keyframes torch-flicker {
+        0%, 100% { opacity: 1; fill: #FFD700; }
+        25% { opacity: 0.8; fill: #FFA500; }
+        50% { opacity: 1; fill: #FFEC8B; }
+        75% { opacity: 0.9; fill: #FF8C00; }
+      }
+      @keyframes chest-glow {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.8; }
+      }
+      @keyframes flag-wave {
+        0%, 100% { transform: skewX(0deg); }
+        25% { transform: skewX(2deg); }
+        75% { transform: skewX(-2deg); }
+      }
+      @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+
+      .walker { animation: walk 12s ease-in-out infinite; }
+      .walker-bob { animation: walk-bob 0.5s steps(2) infinite; }
+      .cloud-1 { animation: cloud1 20s linear infinite; }
+      .cloud-2 { animation: cloud2 28s linear infinite; }
+      .star-1 { animation: twinkle 2s ease-in-out infinite; }
+      .star-2 { animation: twinkle2 3s ease-in-out infinite; }
+      .star-3 { animation: twinkle 2.5s ease-in-out infinite 0.5s; }
+      .torch { animation: torch-flicker 0.4s steps(2) infinite; }
+      .chest-shine { animation: chest-glow 2s ease-in-out infinite; }
+      .flag { animation: flag-wave 2s ease-in-out infinite; transform-origin: left center; }
+      .sparkle-1 { animation: sparkle 2s ease-in-out infinite; }
+      .sparkle-2 { animation: sparkle 2s ease-in-out infinite 0.7s; }
+      .sparkle-3 { animation: sparkle 2s ease-in-out infinite 1.4s; }
+      .title-float { animation: float-text 3s ease-in-out infinite; }
+      .cursor-blink { animation: blink-cursor 1s steps(1) infinite; }
+    </style>
+  </defs>
+
+  <!-- ===== SKY GRADIENT ===== -->
+  <rect width="800" height="320" fill="#1a1a2e"/>
+  <rect width="800" height="320" fill="url(#skyGrad)" opacity="0.7"/>
+  <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0f0c29"/>
+    <stop offset="50%" stop-color="#302b63"/>
+    <stop offset="100%" stop-color="#24243e"/>
+  </linearGradient>
+
+  <!-- ===== STARS ===== -->
+  <rect class="star-1" x="50" y="20" width="2" height="2" fill="#fff"/>
+  <rect class="star-2" x="120" y="45" width="2" height="2" fill="#fff"/>
+  <rect class="star-1" x="200" y="15" width="2" height="2" fill="#fff"/>
+  <rect class="star-3" x="280" y="55" width="3" height="3" fill="#ffffaa"/>
+  <rect class="star-2" x="350" y="25" width="2" height="2" fill="#fff"/>
+  <rect class="star-1" x="430" y="40" width="2" height="2" fill="#fff"/>
+  <rect class="star-3" x="500" y="18" width="2" height="2" fill="#fff"/>
+  <rect class="star-2" x="580" y="50" width="3" height="3" fill="#ffffaa"/>
+  <rect class="star-1" x="650" y="30" width="2" height="2" fill="#fff"/>
+  <rect class="star-3" x="720" y="12" width="2" height="2" fill="#fff"/>
+  <rect class="star-2" x="760" y="42" width="2" height="2" fill="#fff"/>
+  <rect class="star-1" x="90" y="60" width="2" height="2" fill="#fff"/>
+  <rect class="star-3" x="460" y="8" width="2" height="2" fill="#fff"/>
+
+  <!-- ===== MOON ===== -->
+  <circle cx="680" cy="55" r="20" fill="#FFFFCC" opacity="0.9"/>
+  <circle cx="688" cy="50" r="18" fill="#1a1a2e"/>
+
+  <!-- ===== CLOUDS (animated) ===== -->
+  <g class="cloud-1" transform="translate(-120, 0)">
+    <rect x="0" y="65" width="8" height="8" fill="#3a3a5c" opacity="0.4"/>
+    <rect x="8" y="57" width="8" height="16" fill="#3a3a5c" opacity="0.4"/>
+    <rect x="16" y="49" width="8" height="24" fill="#3a3a5c" opacity="0.4"/>
+    <rect x="24" y="57" width="8" height="16" fill="#3a3a5c" opacity="0.4"/>
+    <rect x="32" y="49" width="8" height="24" fill="#3a3a5c" opacity="0.4"/>
+    <rect x="40" y="57" width="8" height="16" fill="#3a3a5c" opacity="0.4"/>
+    <rect x="48" y="65" width="8" height="8" fill="#3a3a5c" opacity="0.4"/>
+  </g>
+  <g class="cloud-2" transform="translate(-300, 0)">
+    <rect x="0" y="85" width="8" height="8" fill="#3a3a5c" opacity="0.3"/>
+    <rect x="8" y="77" width="8" height="16" fill="#3a3a5c" opacity="0.3"/>
+    <rect x="16" y="77" width="8" height="16" fill="#3a3a5c" opacity="0.3"/>
+    <rect x="24" y="85" width="8" height="8" fill="#3a3a5c" opacity="0.3"/>
+  </g>
+
+  <!-- ===== MOUNTAINS (background) ===== -->
+  <!-- Mountain 1 -->
+  <polygon points="0,220 80,120 160,220" fill="#2d2d4a"/>
+  <polygon points="60,145 80,120 100,145" fill="#4a4a6a" opacity="0.5"/>
+  <!-- Mountain 2 -->
+  <polygon points="120,220 230,100 340,220" fill="#252542"/>
+  <polygon points="210,125 230,100 250,125" fill="#4a4a6a" opacity="0.5"/>
+  <!-- Mountain 3 -->
+  <polygon points="280,220 380,130 480,220" fill="#2d2d4a"/>
+  <polygon points="360,155 380,130 400,155" fill="#4a4a6a" opacity="0.5"/>
+  <!-- Mountain 4 -->
+  <polygon points="420,220 540,90 660,220" fill="#252542"/>
+  <polygon points="520,115 540,90 560,115" fill="#4a4a6a" opacity="0.5"/>
+  <!-- Mountain 5 -->
+  <polygon points="600,220 720,110 800,220" fill="#2d2d4a"/>
+
+  <!-- ===== GROUND ===== -->
+  <rect x="0" y="220" width="800" height="100" fill="#1a472a"/>
+  <rect x="0" y="220" width="800" height="8" fill="#2d6b3f"/>
+  <!-- Grass details -->
+  <rect x="30" y="218" width="4" height="6" fill="#3d8b4f"/>
+  <rect x="36" y="216" width="4" height="8" fill="#2d6b3f"/>
+  <rect x="100" y="217" width="4" height="7" fill="#3d8b4f"/>
+  <rect x="180" y="218" width="4" height="6" fill="#2d6b3f"/>
+  <rect x="250" y="216" width="4" height="8" fill="#3d8b4f"/>
+  <rect x="320" y="218" width="4" height="6" fill="#2d6b3f"/>
+  <rect x="400" y="217" width="4" height="7" fill="#3d8b4f"/>
+  <rect x="480" y="216" width="4" height="8" fill="#2d6b3f"/>
+  <rect x="550" y="218" width="4" height="6" fill="#3d8b4f"/>
+  <rect x="630" y="217" width="4" height="7" fill="#3d8b4f"/>
+  <rect x="710" y="218" width="4" height="6" fill="#2d6b3f"/>
+  <rect x="770" y="216" width="4" height="8" fill="#3d8b4f"/>
+
+  <!-- ===== TREES (pixel art) ===== -->
+  <!-- Tree 1 -->
+  <g transform="translate(60, 170)">
+    <rect x="10" y="30" width="8" height="20" fill="#5C4033"/>
+    <rect x="2" y="14" width="24" height="8" fill="#228B22"/>
+    <rect x="6" y="6" width="16" height="8" fill="#2E8B57"/>
+    <rect x="10" y="0" width="8" height="6" fill="#3CB371"/>
+  </g>
+  <!-- Tree 2 -->
+  <g transform="translate(700, 175)">
+    <rect x="10" y="28" width="8" height="17" fill="#5C4033"/>
+    <rect x="2" y="14" width="24" height="8" fill="#228B22"/>
+    <rect x="6" y="6" width="16" height="8" fill="#2E8B57"/>
+    <rect x="10" y="0" width="8" height="6" fill="#3CB371"/>
+  </g>
+  <!-- Tree 3 (small) -->
+  <g transform="translate(350, 185)">
+    <rect x="6" y="20" width="6" height="15" fill="#5C4033"/>
+    <rect x="0" y="10" width="18" height="6" fill="#228B22"/>
+    <rect x="3" y="4" width="12" height="6" fill="#2E8B57"/>
+    <rect x="6" y="0" width="6" height="4" fill="#3CB371"/>
+  </g>
+
+  <!-- ===== TORCH on the left side ===== -->
+  <g transform="translate(20, 180)">
+    <rect x="4" y="10" width="4" height="30" fill="#8B7355"/>
+    <rect x="2" y="6" width="8" height="4" fill="#8B7355"/>
+    <rect class="torch" x="3" y="0" width="6" height="6" fill="#FFD700"/>
+    <rect class="torch" x="1" y="2" width="3" height="3" fill="#FFA500" style="animation-delay: 0.2s"/>
+  </g>
+
+  <!-- ===== TREASURE CHEST ===== -->
+  <g transform="translate(540, 192)">
+    <!-- Chest body -->
+    <rect x="0" y="10" width="28" height="18" fill="#8B6914"/>
+    <rect x="0" y="10" width="28" height="4" fill="#A07828"/>
+    <!-- Chest lid -->
+    <rect x="-2" y="4" width="32" height="8" fill="#A07828"/>
+    <rect x="-2" y="4" width="32" height="2" fill="#C8961E"/>
+    <!-- Lock -->
+    <rect x="11" y="12" width="6" height="6" fill="#FFD700"/>
+    <rect x="13" y="14" width="2" height="2" fill="#8B6914"/>
+    <!-- Glow -->
+    <rect class="chest-shine" x="3" y="0" width="4" height="4" fill="#FFD700" opacity="0.5"/>
+    <rect class="chest-shine" x="20" y="1" width="3" height="3" fill="#FFD700" opacity="0.4" style="animation-delay: 0.5s"/>
+  </g>
+
+  <!-- ===== SIGNPOST ===== -->
+  <g transform="translate(450, 175)">
+    <rect x="8" y="0" width="4" height="45" fill="#8B7355"/>
+    <rect x="-8" y="5" width="34" height="12" fill="#A0926B"/>
+    <rect x="-8" y="5" width="34" height="2" fill="#C8B88A"/>
+    <!-- Arrow -->
+    <polygon points="26,7 32,11 26,15" fill="#A0926B"/>
+  </g>
+
+  <!-- ===== WALKING EXPLORER CHARACTER ===== -->
+  <g class="walker">
+    <g class="walker-bob" transform="translate(100, 184)">
+      <!-- Hat (explorer hat) -->
+      <rect x="4" y="0" width="16" height="4" fill="#8B6914"/>
+      <rect x="0" y="4" width="24" height="4" fill="#A07828"/>
+      <!-- Head -->
+      <rect x="6" y="8" width="12" height="10" fill="#FDBCB4"/>
+      <!-- Eyes -->
+      <rect x="8" y="12" width="3" height="3" fill="#1a1a2e"/>
+      <rect x="14" y="12" width="3" height="3" fill="#1a1a2e"/>
+      <!-- Eye shine -->
+      <rect x="8" y="12" width="1" height="1" fill="#fff"/>
+      <rect x="14" y="12" width="1" height="1" fill="#fff"/>
+      <!-- Smile -->
+      <rect x="10" y="16" width="4" height="1" fill="#c97878"/>
+      <!-- Body (vest/jacket) -->
+      <rect x="4" y="18" width="16" height="12" fill="#2E5C3F"/>
+      <!-- Belt -->
+      <rect x="4" y="26" width="16" height="2" fill="#5C4033"/>
+      <rect x="10" y="25" width="4" height="4" fill="#FFD700"/>
+      <!-- Arms -->
+      <rect x="0" y="18" width="4" height="10" fill="#FDBCB4"/>
+      <rect x="20" y="18" width="4" height="10" fill="#FDBCB4"/>
+      <!-- Backpack -->
+      <rect x="20" y="18" width="6" height="10" fill="#5C4033"/>
+      <rect x="20" y="18" width="6" height="2" fill="#8B7355"/>
+      <!-- Legs -->
+      <rect x="6" y="30" width="5" height="6" fill="#4A3728"/>
+      <rect x="13" y="30" width="5" height="6" fill="#4A3728"/>
+      <!-- Boots -->
+      <rect x="5" y="34" width="7" height="4" fill="#3D2B1F"/>
+      <rect x="12" y="34" width="7" height="4" fill="#3D2B1F"/>
+    </g>
+  </g>
+
+  <!-- ===== SPARKLES following the path ===== -->
+  <g class="sparkle-1">
+    <rect x="200" y="215" width="3" height="3" fill="#FFD700"/>
+    <rect x="201" y="212" width="1" height="2" fill="#FFD700"/>
+    <rect x="201" y="219" width="1" height="2" fill="#FFD700"/>
+    <rect x="197" y="216" width="2" height="1" fill="#FFD700"/>
+    <rect x="204" y="216" width="2" height="1" fill="#FFD700"/>
+  </g>
+  <g class="sparkle-2">
+    <rect x="400" y="213" width="3" height="3" fill="#FFD700"/>
+    <rect x="401" y="210" width="1" height="2" fill="#FFD700"/>
+    <rect x="401" y="217" width="1" height="2" fill="#FFD700"/>
+    <rect x="397" y="214" width="2" height="1" fill="#FFD700"/>
+    <rect x="404" y="214" width="2" height="1" fill="#FFD700"/>
+  </g>
+  <g class="sparkle-3">
+    <rect x="600" y="212" width="3" height="3" fill="#FFD700"/>
+    <rect x="601" y="209" width="1" height="2" fill="#FFD700"/>
+    <rect x="601" y="216" width="1" height="2" fill="#FFD700"/>
+    <rect x="597" y="213" width="2" height="1" fill="#FFD700"/>
+    <rect x="604" y="213" width="2" height="1" fill="#FFD700"/>
+  </g>
+
+  <!-- ===== PATH on the ground ===== -->
+  <rect x="0" y="248" width="800" height="4" fill="#2d5a35" opacity="0.5"/>
+  <rect x="50" y="250" width="12" height="3" fill="#1a472a" opacity="0.5"/>
+  <rect x="150" y="249" width="8" height="3" fill="#1a472a" opacity="0.5"/>
+  <rect x="300" y="250" width="10" height="3" fill="#1a472a" opacity="0.5"/>
+  <rect x="500" y="249" width="12" height="3" fill="#1a472a" opacity="0.5"/>
+  <rect x="650" y="250" width="8" height="3" fill="#1a472a" opacity="0.5"/>
+
+  <!-- ===== TITLE TEXT (pixel style) ===== -->
+  <g class="title-float">
+    <!-- Background box for title -->
+    <rect x="180" y="255" width="440" height="52" rx="4" fill="#1a1a2e" opacity="0.85" stroke="#FFD700" stroke-width="2"/>
+    <rect x="182" y="257" width="436" height="48" rx="3" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.4"/>
+    
+    <!-- Corner decorations -->
+    <rect x="184" y="259" width="6" height="2" fill="#FFD700" opacity="0.6"/>
+    <rect x="184" y="259" width="2" height="6" fill="#FFD700" opacity="0.6"/>
+    <rect x="610" y="259" width="6" height="2" fill="#FFD700" opacity="0.6"/>
+    <rect x="614" y="259" width="2" height="6" fill="#FFD700" opacity="0.6"/>
+    <rect x="184" y="299" width="6" height="2" fill="#FFD700" opacity="0.6"/>
+    <rect x="184" y="295" width="2" height="6" fill="#FFD700" opacity="0.6"/>
+    <rect x="610" y="299" width="6" height="2" fill="#FFD700" opacity="0.6"/>
+    <rect x="614" y="295" width="2" height="6" fill="#FFD700" opacity="0.6"/>
+
+    <!-- Main Title -->
+    <text x="400" y="280" text-anchor="middle" fill="#FFD700" font-family="'Courier New', monospace" font-size="20" font-weight="bold" letter-spacing="4">⚔ FRANCISCO LANCHE ⚔</text>
+    <!-- Subtitle -->
+    <text x="400" y="298" text-anchor="middle" fill="#8BC34A" font-family="'Courier New', monospace" font-size="11" letter-spacing="2">FULL STACK DEVELOPER · EXPLORADOR DEL CÓDIGO</text>
+  </g>
+
+  <!-- ===== TYPING CURSOR ===== -->
+  <rect class="cursor-blink" x="556" y="289" width="8" height="12" fill="#8BC34A" opacity="0.8"/>
+
+  <!-- ===== FLAG on mountain ===== -->
+  <g transform="translate(537, 80)">
+    <rect x="0" y="0" width="2" height="14" fill="#8B7355"/>
+    <g class="flag">
+      <rect x="2" y="0" width="12" height="8" fill="#FF4444"/>
+      <rect x="2" y="0" width="12" height="2" fill="#FF6666"/>
+    </g>
+  </g>
+
+</svg>

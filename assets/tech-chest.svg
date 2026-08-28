@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 360" width="100%" height="360">
+  <defs>
+    <style>
+      @keyframes chest-shimmer {
+        0%, 100% { filter: drop-shadow(0 0 8px #FFD700); }
+        50% { filter: drop-shadow(0 0 20px #FF9100); }
+      }
+      @keyframes float-rune1 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(4deg); }
+      }
+      @keyframes float-rune2 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(-4deg); }
+      }
+      @keyframes float-rune3 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-7px) rotate(3deg); }
+      }
+      @keyframes beam-glow {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.45; }
+      }
+      @keyframes sparkle-twinkle {
+        0%, 100% { opacity: 0; transform: scale(0.3); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      .chest-light { animation: chest-shimmer 3s infinite ease-in-out; }
+      .rune-group1 { animation: float-rune1 3.5s infinite ease-in-out; }
+      .rune-group2 { animation: float-rune2 4s infinite ease-in-out 0.5s; }
+      .rune-group3 { animation: float-rune3 3.8s infinite ease-in-out 1s; }
+      .magic-beam { animation: beam-glow 3s infinite ease-in-out; }
+      .sparkle { animation: sparkle-twinkle 2.5s infinite ease-in-out; }
+    </style>
+    <linearGradient id="chestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3E2723"/>
+      <stop offset="50%" stop-color="#5D4037"/>
+      <stop offset="100%" stop-color="#27130E"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="50%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+    <linearGradient id="magicLight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#64FFDA" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1A237E" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="itemCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Dark Vault -->
+  <rect x="5" y="5" width="840" height="350" rx="10" fill="#0c121e" stroke="#FFD700" stroke-width="2.5"/>
+  <rect x="12" y="12" width="826" height="336" rx="6" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.3"/>
+
+  <!-- Vault Header -->
+  <text x="425" y="38" fill="#FFD700" font-family="'Courier New', monospace" font-size="20" font-weight="900" text-anchor="middle" letter-spacing="2">👑 EL COFRE DE HABILIDADES · TECH INVENTORY 👑</text>
+
+  <!-- Magical Light Beam radiating from the treasure -->
+  <polygon class="magic-beam" points="425,110 200,340 650,340" fill="url(#magicLight)"/>
+
+  <!-- PIXEL ART OPEN TREASURE CHEST IN CENTER -->
+  <g class="chest-light" transform="translate(425, 235)">
+    <!-- Chest Base -->
+    <rect x="-60" y="20" width="120" height="60" rx="4" fill="url(#chestGrad)" stroke="#1A0D00" stroke-width="3"/>
+    <rect x="-60" y="20" width="120" height="12" fill="url(#goldTrim)"/>
+    <rect x="-60" y="68" width="120" height="12" fill="url(#goldTrim)"/>
+    <rect x="-8" y="20" width="16" height="60" fill="url(#goldTrim)"/>
+    <!-- Lock Keyhole -->
+    <circle cx="0" cy="45" r="7" fill="#212121"/>
+    <polygon points="-3,45 3,45 2,56 -2,56" fill="#212121"/>
+    <circle cx="0" cy="45" r="4" fill="#FFD700"/>
+
+    <!-- Open Chest Lid (Tilted Up) -->
+    <polygon points="-65,-25 65,-25 55,20 -55,20" fill="url(#chestGrad)" stroke="#1A0D00" stroke-width="3"/>
+    <polygon points="-65,-25 65,-25 60,-15 -60,-15" fill="url(#goldTrim)"/>
+    <polygon points="-55,10 55,10 55,20 -55,20" fill="url(#goldTrim)"/>
+
+    <!-- Glowing Jewels inside chest -->
+    <circle cx="-30" cy="15" r="8" fill="#E91E63"/>
+    <circle cx="-10" cy="12" r="10" fill="#00E5FF"/>
+    <circle cx="15" cy="14" r="9" fill="#76FF03"/>
+    <circle cx="35" cy="16" r="7" fill="#FFD600"/>
+    <circle cx="0" cy="8" r="6" fill="#D500F9"/>
+  </g>
+
+  <!-- LEFT ARSENAL: FRONTEND & CORE -->
+  <g class="rune-group1" transform="translate(35, 60)">
+    <!-- Category Title -->
+    <rect x="0" y="0" width="230" height="28" rx="4" fill="#1e293b" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="115" y="19" fill="#38BDF8" font-family="'Courier New', monospace" font-size="13" font-weight="900" text-anchor="middle">⚔️ ARMAS (FRONTEND)</text>
+
+    <!-- HTML / CSS Item -->
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#E44D26" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#E44D26"/>
+      <text x="18" y="22" fill="#FFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">5</text>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">HTML5 &amp; CSS3</text>
+      <text x="215" y="21" fill="#E44D26" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">MAX</text>
+    </g>
+
+    <!-- JavaScript & TypeScript Item -->
+    <g transform="translate(0, 76)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#F7DF1E" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#3178C6"/>
+      <text x="18" y="22" fill="#FFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">TS</text>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">JavaScript / TS</text>
+      <text x="215" y="21" fill="#F7DF1E" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">MAX</text>
+    </g>
+
+    <!-- React & Next.js Item -->
+    <g transform="translate(0, 116)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#61DAFB" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#000" stroke="#61DAFB" stroke-width="1"/>
+      <circle cx="18" cy="17" r="4" fill="#61DAFB"/>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">React &amp; Next.js</text>
+      <text x="215" y="21" fill="#61DAFB" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">LV.9</text>
+    </g>
+
+    <!-- Flutter & Mobile Item -->
+    <g transform="translate(0, 156)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#02569B" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#02569B"/>
+      <polygon points="12,12 18,17 12,22" fill="#FFF"/>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">Responsive UI / UX</text>
+      <text x="215" y="21" fill="#0288D1" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">LV.9</text>
+    </g>
+  </g>
+
+  <!-- RIGHT ARSENAL: BACKEND & ENGINES -->
+  <g class="rune-group2" transform="translate(585, 60)">
+    <!-- Category Title -->
+    <rect x="0" y="0" width="230" height="28" rx="4" fill="#1e293b" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="115" y="19" fill="#C084FC" font-family="'Courier New', monospace" font-size="13" font-weight="900" text-anchor="middle">🛡️ ARMADURAS (BACKEND)</text>
+
+    <!-- Node.js Item -->
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#339933" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#339933"/>
+      <text x="18" y="22" fill="#FFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">⬡</text>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">Node.js / Express</text>
+      <text x="215" y="21" fill="#68A063" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">MAX</text>
+    </g>
+
+    <!-- Python Item -->
+    <g transform="translate(0, 76)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#3776AB" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#3776AB"/>
+      <text x="18" y="22" fill="#FFD43B" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">🐍</text>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">Python Dev</text>
+      <text x="215" y="21" fill="#FFD43B" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">LV.9</text>
+    </g>
+
+    <!-- Java & C# Item -->
+    <g transform="translate(0, 116)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#9C27B0" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#9C27B0"/>
+      <text x="18" y="22" fill="#FFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">#</text>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">Java &amp; C# OOP</text>
+      <text x="215" y="21" fill="#BA68C8" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">LV.8</text>
+    </g>
+
+    <!-- SQL & Databases -->
+    <g transform="translate(0, 156)">
+      <rect x="0" y="0" width="230" height="34" rx="4" fill="url(#itemCardBg)" stroke="#00BCD4" stroke-width="1"/>
+      <rect x="8" y="7" width="20" height="20" rx="3" fill="#00838F"/>
+      <text x="18" y="22" fill="#FFF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">🗄️</text>
+      <text x="36" y="21" fill="#FFF" font-family="'Courier New', monospace" font-size="12" font-weight="bold">SQL &amp; Databases</text>
+      <text x="215" y="21" fill="#4DD0E1" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="end">LV.9</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM CENTER SPECIAL ARTIFACT: UNITY & GAME DEV -->
+  <g class="rune-group3" transform="translate(295, 298)">
+    <rect x="0" y="0" width="260" height="36" rx="6" fill="#1e293b" stroke="#FFD700" stroke-width="1.5"/>
+    <rect x="8" y="8" width="20" height="20" rx="4" fill="#000" stroke="#FFD700" stroke-width="1"/>
+    <text x="18" y="23" fill="#FFD700" font-family="monospace" font-size="13" text-anchor="middle">🎮</text>
+    <text x="36" y="23" fill="#FFF" font-family="'Courier New', monospace" font-size="13" font-weight="bold">Unity &amp; Game Dev</text>
+    <text x="245" y="23" fill="#FFD700" font-family="'Courier New', monospace" font-size="11" font-weight="bold" text-anchor="end">SPECIAL</text>
+  </g>
+
+  <!-- Sparkles Floating Up from Chest -->
+  <g class="sparkle" transform="translate(380, 140)"><polygon points="0,-4 3,0 0,4 -3,0" fill="#FFD700"/></g>
+  <g class="sparkle" transform="translate(470, 130)" style="animation-delay: 0.8s"><polygon points="0,-4 3,0 0,4 -3,0" fill="#64FFDA"/></g>
+  <g class="sparkle" transform="translate(425, 95)" style="animation-delay: 1.5s"><polygon points="0,-5 4,0 0,5 -4,0" fill="#FF4081"/></g>
+</svg>
