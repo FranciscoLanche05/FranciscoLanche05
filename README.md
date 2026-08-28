@@ -68,25 +68,12 @@
 
 <br/>
 
-<h2>🏆 SALÓN DE TROFEOS Y LOGROS 🏆</h2>
+<img src="./assets/trophy-stats.svg" width="100%" alt="Salón de Trofeos y Logros de Batalla" />
+
+<br/>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=FranciscoLanche05&theme=onedark&no-frame=false&no-bg=false&margin-w=4" alt="GitHub Trophies" />
-</p>
-
-<table align="center" border="0">
-  <tr>
-    <td align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=FranciscoLanche05&show_icons=true&theme=tokyonight&border_color=D4AF37&title_color=FFD700&text_color=FFFFFF&icon_color=64FFDA&hide_border=false" alt="Francisco's GitHub Stats" />
-    </td>
-    <td align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FranciscoLanche05&layout=compact&theme=tokyonight&border_color=D4AF37&title_color=FFD700&text_color=FFFFFF&hide_border=false" alt="Top Languages" />
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=FranciscoLanche05&theme=tokyonight&border=D4AF37&stroke=FFD700&ring=64FFDA&fire=FF5252&currStreakLabel=FFD700" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=FranciscoLanche05&theme=tokyonight&border=D4AF37&stroke=FFD700&ring=64FFDA&fire=FF5252&currStreakLabel=FFD700" alt="GitHub Streak" />
 </p>
 
 <br/>
